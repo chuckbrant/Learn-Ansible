@@ -1,0 +1,18 @@
+- hosts: media
+  gather_facts: no
+  vars:
+    roku: 
+  tasks:
+    - shell: mediainfo /home/cbrant/720p30.mp4  | grep Height
+      register: mediainfo
+    # Print all contents of the shell task's output.
+    - debug: msg="{{ mediainfo.stdout }}"
+    - set_fact:
+        roku: "file is Roku compatatble!"
+      when: mediainfo.stdout.find('720') == true
+        msg="{{ roku }}"
+
+
+
+
+#    - shell: mediainfo /home/cbrant/720p30_notroku.mp4  | grep Height 

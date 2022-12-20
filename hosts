@@ -3,3 +3,6 @@ naschuck ansible_host=192.168.1.250
 nasmom ansible_host=192.168.1.251
 rhel9 ansible_host=192.168.1.252 
 ubtunu ansible_host=192.168.1.253 
+[media]
+ubtunu ansible_host=192.168.1.253
+
