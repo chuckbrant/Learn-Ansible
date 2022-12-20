@@ -7,7 +7,7 @@ Using *Handbreak CLI* I can convert the media using a Roku profile of **Roku 720
 
 I'll use rsync to keep the directory on my linux machine in sync with a USB 1TB NVME that runs stright from the TV due to it's low power consumption, this is a EXT3 filesytems.
 
-The goal is to automate this using Ansible from my OSX laptop:
+## The goal is to automate this using Ansible from my OSX laptop:
 
 
 * use "vars.yaml" to define the list TV shows
