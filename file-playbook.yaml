@@ -1,0 +1,13 @@
+- hosts: all
+  tasks: 
+  - name: Touch a file, using symbolic modes to set the permissions (equivalent to 0644)
+    file:
+      path: /tmp/foo.conf
+      state: touch
+      mode: u=rw,g=r,o=r
+  - name: Copy file with owner and permission, using symbolic representation
+    ansible.builtin.copy:
+      src: testfile
+      dest: /tmp/testfile
+      owner: cbrant
+      mode: u=rw,g=r,o=r
